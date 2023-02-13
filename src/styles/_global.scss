@@ -9,27 +9,25 @@
 }
 
 html {
-  font-size: 10px;
-  font-family: "Montserrat", sans-serif;
-}
-
-body {
-  font-size: 1.5rem;
-  font-weight: 700;
-  line-height: 1;
-  color: $grayish-blue;
-  background-color: $very-light-grayish-blue;
+  font-size: 62.5%;
+  background-color: black;
 }
 
 a {
   text-decoration: none;
 }
 
-input[type="radio"] {
-  appearance: none;
-  position: absolute;
+button {
+  border: none;
+  font: inherit;
 }
 
-fieldset {
-  border: none;
+li {
+  list-style: none;
+}
+
+img {
+  max-inline-size: 100%;
+  block-size: auto;
+  object-fit: cover;
 }

@@ -1,9 +1,61 @@
-$breakpoints-up: (
-  "desktop": "1070px",
-);
+@use "./variables" as *;
 
 @mixin screen($size) {
-  @media screen and (min-width: map-get($breakpoints-up, $size)) {
+  @media screen and (min-width: $size) {
     @content;
   }
+}
+
+@mixin font-nav-item($color) {
+  font-family: $ff-text;
+  font-size: 1.4rem;
+  font-weight: $fw-bold;
+  text-transform: uppercase;
+  color: $color;
+  letter-spacing: 0.1rem;
+  line-height: 2.4;
+}
+
+@mixin font-menu-item($color) {
+  font-family: $ff-text;
+  font-size: 2rem;
+  font-weight: $fw-bold;
+  text-transform: uppercase;
+  color: $color;
+  letter-spacing: 0.13rem;
+  line-height: 1;
+}
+
+@mixin font-p($color) {
+  font-family: $ff-text;
+  font-size: 1.6rem;
+  font-weight: $fw-bold;
+  color: $color;
+  letter-spacing: -0.03rem;
+  line-height: 2.6rem;
+}
+
+@mixin font-title($color) {
+  font-family: $ff-heading;
+  font-weight: $fw-regular;
+  color: $color;
+  line-height: 1;
+}
+
+@mixin font-title-l($color) {
+  letter-spacing: -0.1rem;
+  font-size: 7.2rem;
+  @include font-title($color);
+}
+
+@mixin font-title-m($color) {
+  font-size: 5.6rem;
+  letter-spacing: -0.08rem;
+  @include font-title($color);
+}
+
+@mixin font-title-s($color) {
+  font-size: 2.8rem;
+  letter-spacing: -0.04rem;
+  @include font-title($color);
 }
