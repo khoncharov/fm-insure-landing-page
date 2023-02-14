@@ -29,9 +29,9 @@
 @mixin font-p($color) {
   font-family: $ff-text;
   font-size: 1.6rem;
-  font-weight: $fw-bold;
+  font-weight: $fw-regular;
   color: $color;
-  letter-spacing: -0.03rem;
+  letter-spacing: 0.005rem;
   line-height: 2.6rem;
 }
 
@@ -39,7 +39,7 @@
   font-family: $ff-heading;
   font-weight: $fw-regular;
   color: $color;
-  line-height: 1;
+  line-height: 90%;
 }
 
 @mixin font-title-l($color) {
@@ -52,6 +52,7 @@
   font-size: 5.6rem;
   letter-spacing: -0.08rem;
   @include font-title($color);
+  line-height: 100%;
 }
 
 @mixin font-title-s($color) {

@@ -1,0 +1,112 @@
+@use "./variables" as *;
+@use "./mixin" as *;
+
+$footer-height-desktop: 452px;
+
+.footer {
+  margin-top: 150px;
+  height: $footer-height-desktop;
+  display: grid;
+
+  &__bg {
+    position: absolute;
+    background-color: $bg-mid;
+    width: 100%;
+    height: $footer-height-desktop;
+    background-image: url("./svg/bg-pattern-footer-desktop.svg");
+    background-repeat: no-repeat;
+    background-position: -8px 0;
+    z-index: -1;
+  }
+
+  &__inner {
+    padding-inline: 24px;
+    margin-inline: auto;
+    width: $min-desktop-width;
+  }
+
+  &__header {
+    height: 92px;
+    margin-top: 30px;
+    border-bottom: 1px solid #cdcecf;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__social-list {
+    display: flex;
+    column-gap: 16px;
+  }
+
+  &__social-link {
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-color: #837d88;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+    transition: background-color $t-x1;
+  }
+
+  &__social-link:hover {
+    background-color: $hover-dark-text;
+  }
+
+  &__site-map {
+    margin-top: 39px;
+    padding-bottom: 34px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 30px;
+    border-bottom: 1px solid #cdcecf;
+  }
+
+  &__column-caption {
+    @include font-nav-item($text-mid);
+  }
+
+  &__column-item-list {
+    margin-top: 20px;
+  }
+
+  &__column-item-link {
+    @include font-nav-item($text-dark);
+    line-height: 2.2;
+    transition: $t-x1;
+  }
+
+  &__column-item-link:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 1.5px;
+    text-underline-offset: 2px;
+  }
+}
+
+.icon-fb {
+  -webkit-mask-image: url(./svg/icon-facebook.svg);
+  mask-image: url(./svg/icon-facebook.svg);
+}
+
+.icon-tw {
+  -webkit-mask-image: url(../../public/svg/icon-twitter.svg);
+  mask-image: url(../../public/svg/icon-twitter.svg);
+}
+
+.icon-pin {
+  -webkit-mask-image: url(../../public/svg/icon-pinterest.svg);
+  mask-image: url(../../public/svg/icon-pinterest.svg);
+}
+
+.icon-inst {
+  -webkit-mask-image: url(../../public/svg/icon-instagram.svg);
+  mask-image: url(../../public/svg/icon-instagram.svg);
+}
+
+.attribution {
+  padding-block: 24px;
+  display: flex;
+  justify-content: space-between;
+}
