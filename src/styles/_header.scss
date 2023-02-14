@@ -27,6 +27,12 @@
   &__logo {
     height: 18px;
   }
+
+  &__logo:focus-visible {
+    outline-offset: 3px;
+    border-radius: 2px;
+    outline: 2px dashed #4114cb;
+  }
 }
 
 .nav {
@@ -54,6 +60,12 @@
     color: $hover-dark-text;
   }
 
+  &__link:focus-visible {
+    outline-offset: 3px;
+    border-radius: 2px;
+    outline: 2px dashed #4114cb;
+  }
+
   &__btn {
     margin-left: 16px;
     height: 40px;
@@ -67,7 +79,7 @@
   &__btn:active,
   &__btn:hover {
     background: $bg-dark;
-    color: $text-light;
+    color: $text-light-2;
   }
 
   &__menu-btn {

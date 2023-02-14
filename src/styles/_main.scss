@@ -50,7 +50,7 @@
     margin-top: 105px;
     display: grid;
     grid-template-columns: 1fr 540px;
-    grid-template-rows: 220px 95px 1fr;
+    grid-template-rows: 220px 108px 1fr;
   }
 
   &__p1-title {
@@ -82,7 +82,25 @@
   &__p1-btn {
     grid-column: 1;
     grid-row: 3;
+    width: max-content;
+    height: 40px;
+    padding-inline: 26px;
+    border: 2px solid $text-light-2;
     @include font-nav-item($text-light-2);
+    line-height: 2.8;
+    transition: $t-x1;
+  }
+
+  &__p1-btn:active,
+  &__p1-btn:hover {
+    background: $bg-light;
+    color: $text-dark;
+  }
+
+  &__p1-btn:focus-visible {
+    outline-offset: 3px;
+    border-radius: 2px;
+    outline: 2px dashed #dbd5ec;
   }
 
   &__p1-img {
@@ -160,7 +178,25 @@
 
   &__p3-btn {
     justify-self: end;
+    width: max-content;
+    height: 40px;
+    padding-inline: 20px;
+    border: 2px solid $text-light-2;
     @include font-nav-item($text-light-2);
+    line-height: 2.8;
+    transition: $t-x1;
+  }
+
+  &__p3-btn:active,
+  &__p3-btn:hover {
+    background: $bg-light;
+    color: $text-dark;
+  }
+
+  &__p3-btn:focus-visible {
+    outline-offset: 3px;
+    border-radius: 2px;
+    outline: 2px dashed #dbd5ec;
   }
 }
 
