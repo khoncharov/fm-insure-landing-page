@@ -60,3 +60,10 @@
   letter-spacing: -0.04rem;
   @include font-title($color);
 }
+
+@mixin font-title-l-mobile($color) {
+  letter-spacing: -0.07rem;
+  font-size: 4.8rem;
+  @include font-title($color);
+  line-height: 100%;
+}
