@@ -10,7 +10,7 @@
     top: 797px;
     right: 0;
     width: 124px;
-    height: 300px;
+    height: 330px;
     background-image: url(./svg/bg-pattern-intro-right-mobile.svg);
     background-repeat: no-repeat;
     z-index: 2;
@@ -190,47 +190,107 @@
   }
 
   &__part-2 {
-    margin-top: 150px;
-    // display: grid;
-    display: none;
-    grid-template-rows: 224px 258px;
-    grid-template-columns: repeat(3, 350px);
-    column-gap: 30px;
+    display: grid;
+    margin-top: 140px;
+    padding-inline: 24px;
+    grid-template-rows: 113px repeat(3, 250px);
+    row-gap: 56px;
+
+    @include screen($min-tablet-width-2) {
+      margin-top: 150px;
+      grid-template-rows: 1fr 258px;
+      row-gap: 0;
+      grid-template-columns: repeat(3, min(29.8vw, 350px));
+      column-gap: min(2.2vw, 30px);
+    }
+  }
+
+  &__p2-article {
+    max-width: 330px;
+    display: grid;
+    grid-template-rows: 125px 47px 1fr;
+
+    @include screen($min-tablet-width-2) {
+      max-width: unset;
+    }
+  }
+
+  &__p2-article:nth-child(3) {
+    justify-self: center;
+
+    @include screen($min-tablet-width-2) {
+      justify-self: unset;
+    }
+  }
+
+  &__p2-article:nth-child(4) {
+    justify-self: end;
+
+    @include screen($min-tablet-width-2) {
+      justify-self: unset;
+    }
   }
 
   &__p2-title {
-    grid-row: 1;
-    grid-column: 1 / -1;
-    padding-top: 64px;
-    max-width: 14ch;
-    @include font-title-l($text-dark);
+    padding-top: 41px;
+    @include font-title-l-mobile($text-dark);
     position: relative;
+    text-align: center;
+
+    @include screen($min-tablet-width-2) {
+      padding-top: 64px;
+      grid-row: 1;
+      grid-column: 1 / -1;
+      text-align: start;
+      padding-bottom: 95px;
+    }
+
+    @include screen($min-desktop-width) {
+      @include font-title-l($text-dark);
+    }
   }
 
   &__p2-title::before {
     content: "";
     position: absolute;
     top: 0;
-    left: 0;
+    left: calc(50% - 75px);
     width: 150px;
     height: 1px;
     background-color: $dark-violet;
+
+    @include screen($min-tablet-width-2) {
+      left: 0;
+    }
   }
 
   &__p2-icon {
     width: 86px;
     height: 86px;
     background-repeat: no-repeat;
+    justify-self: center;
+
+    @include screen($min-tablet-width-2) {
+      justify-self: start;
+    }
   }
 
   &__p2-caption {
-    margin-top: 39px;
     @include font-title-s($text-dark);
+    text-align: center;
+
+    @include screen($min-tablet-width-2) {
+      text-align: start;
+    }
   }
 
   &__p2-text {
-    margin-top: 22px;
+    text-align: center;
     @include font-p($text-mid);
+
+    @include screen($min-tablet-width-2) {
+      text-align: start;
+    }
   }
 
   &__part-3 {
