@@ -152,7 +152,7 @@
     padding-inline: 26px;
     border: 2px solid $text-light-2;
     @include font-nav-item($text-light-2);
-    line-height: 2.8;
+    line-height: 2.6;
     transition: background-color $t-x1, color $t-x1;
 
     @include screen($min-tablet-width-2) {
@@ -199,7 +199,7 @@
 
     @include screen($min-tablet-width-2) {
       margin-top: 150px;
-      grid-template-rows: 1fr 258px;
+      grid-template-rows: auto;
       row-gap: 0;
       grid-template-columns: repeat(3, min(29.8vw, 350px));
       column-gap: min(2.2vw, 30px);
@@ -295,40 +295,75 @@
   }
 
   &__part-3 {
-    margin-top: 150px;
-    // display: grid;
-    display: none;
-    grid-template-columns: 570px 1fr;
-    align-items: center;
-    padding-inline: 105px;
-    height: 250px;
+    height: 344px;
+    margin-top: 140px;
+    display: grid;
+    grid-template-rows: 3fr 2fr;
     position: relative;
+
+    @include screen($min-tablet-width-1) {
+      margin-top: 158px;
+      height: 250px;
+      padding-inline: 56px;
+      grid-template-rows: auto;
+      grid-template-columns: 2fr 1fr;
+      align-items: center;
+    }
+
+    @include screen($min-tablet-width-2) {
+      padding-inline: 105px;
+    }
   }
 
   &__bg-p3 {
     position: absolute;
     background-color: $bg-dark;
-    inset: 0 24px;
+    inset: 0px 24px;
     z-index: -1;
-    background-image: url(./svg/bg-pattern-how-we-work-desktop.svg);
+    background-image: url(./svg/bg-pattern-how-we-work-mobile.svg);
     background-repeat: no-repeat;
-    background-position: right;
+    background-position: right top;
+
+    @include screen($min-tablet-width-1) {
+      background-image: url(./svg/bg-pattern-how-we-work-desktop.svg);
+    }
   }
 
   &__p3-title {
+    margin-top: 72px;
     max-width: 17ch;
-    @include font-title-m($text-light-2);
+    padding-inline: 24px;
+    justify-self: center;
+    @include font-title-m-mobile($text-light-2);
+    text-align: center;
+
+    @include screen($min-tablet-width-1) {
+      justify-self: unset;
+      margin-top: 0;
+      padding-inline: 0;
+      text-align: start;
+    }
+
+    @include screen($min-desktop-width) {
+      @include font-title-m($text-light-2);
+    }
   }
 
   &__p3-btn {
-    justify-self: end;
+    margin-top: 26px;
+    justify-self: center;
     width: max-content;
     height: 40px;
     padding-inline: 20px;
     border: 2px solid $text-light-2;
     @include font-nav-item($text-light-2);
-    line-height: 2.8;
-    transition: $t-x1;
+    line-height: 2.6;
+    transition: background-color $t-x1, color $t-x1;
+
+    @include screen($min-tablet-width-1) {
+      justify-self: end;
+      margin-top: 0;
+    }
   }
 
   &__p3-btn:active,

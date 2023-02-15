@@ -67,3 +67,10 @@
   @include font-title($color);
   line-height: 100%;
 }
+
+@mixin font-title-m-mobile($color) {
+  font-size: 4rem;
+  letter-spacing: -0.08rem;
+  @include font-title($color);
+  line-height: 100%;
+}
