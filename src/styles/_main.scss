@@ -4,11 +4,6 @@
 .main {
   position: relative;
   overflow: hidden;
-  display: grid;
-
-  @include screen($min-desktop-width) {
-    grid-template-columns: 1fr max-content 1fr;
-  }
 
   &__bg-right {
     position: absolute;
@@ -46,6 +41,7 @@
   }
 
   &__bg-line-top {
+    z-index: -1;
     position: absolute;
     top: 0;
     width: 100%;
@@ -58,16 +54,14 @@
   }
 
   &__section {
-    z-index: 1;
+    margin-inline: auto;
 
     @include screen($min-tablet-width-2) {
       padding-inline: 24px;
-      grid-column: 2;
-      min-width: $min-tablet-width-2;
     }
 
     @include screen($min-desktop-width) {
-      width: $min-desktop-width;
+      max-width: $min-desktop-width;
     }
   }
 
