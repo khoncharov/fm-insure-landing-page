@@ -6,6 +6,13 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Frontend Mentor | Insure landing page</title>
+    <link
+      rel="preload"
+      as="image"
+      href="./images/image-intro-mobile.jpg"
+      imagesrcset="./images/image-intro-mobile.jpg 375w, ./images/image-intro-desktop.jpg 540w"
+      imagesizes="(min-width: 960px) 540px, 375px"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -46,18 +53,25 @@
       <div class="main__bg-left"></div>
 
       <section class="main__section main__part-1">
-        <h1 class="main__p1-title">Humanizing your insurance.</h1>
-        <p class="main__p1-text">
-          Get your life insurance coverage easier and faster. We blend our expertise and
-          technology to help you find the plan that's right for you. Ensure you and your
-          loved ones are protected.
-        </p>
-        <a class="main__p1-btn" href="#">View plans</a>
+        <div class="main__p1-content">
+          <h1 class="main__p1-title">Humanizing your insurance.</h1>
+          <p class="main__p1-text">
+            Get your life insurance coverage easier and faster. We blend our expertise and
+            technology to help you find the plan that's right for you. Ensure you and your
+            loved ones are protected.
+          </p>
+          <a class="main__p1-btn" href="#">View plans</a>
+        </div>
         <img
           class="main__p1-img"
           width="540"
           height="650"
-          src="./images/image-intro-desktop.jpg"
+          src="./images/image-intro-mobile.jpg"
+          srcset="
+            ./images/image-intro-mobile.jpg  375w,
+            ./images/image-intro-desktop.jpg 540w
+          "
+          sizes="(min-width: 960px) 540px, 375px"
           alt="The family walks along the path. Dad, mom, little son and little daughter."
         />
       </section>
