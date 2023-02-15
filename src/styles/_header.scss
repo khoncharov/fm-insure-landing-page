@@ -4,23 +4,19 @@
 .header {
   height: 80px;
   background-color: $bg-light;
-  display: grid;
-
-  @include screen($min-desktop-width) {
-    grid-template-columns: 1fr max-content 1fr;
-  }
 
   &__inner {
-    display: flex;
+    margin-inline: auto;
     padding-inline: 24px;
+    padding-top: 24px;
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    max-width: $min-desktop-width;
 
-    @include screen($min-desktop-width) {
-      grid-column: 2;
-      min-width: $min-desktop-width;
-      max-width: $width-desktop;
+    @include screen($min-tablet-width-1) {
+      padding-top: 19px;
     }
   }
 
@@ -42,7 +38,7 @@
     column-gap: 8px;
     align-items: center;
 
-    @include screen($min-tablet-width) {
+    @include screen($min-tablet-width-1) {
       display: flex;
     }
   }
@@ -91,7 +87,7 @@
     background-color: $bg-light;
     cursor: pointer;
 
-    @include screen($min-tablet-width) {
+    @include screen($min-tablet-width-1) {
       display: none;
     }
   }
