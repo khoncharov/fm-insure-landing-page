@@ -13,9 +13,10 @@
     height: 330px;
     background-image: url(./svg/bg-pattern-intro-right-mobile.svg);
     background-repeat: no-repeat;
-    z-index: 2;
+    z-index: -1;
 
     @include screen($min-tablet-width-1) {
+      z-index: 0;
       top: -80px;
       width: 436px;
       height: 593px;
