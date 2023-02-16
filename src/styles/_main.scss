@@ -1,0 +1,391 @@
+@use "./variables" as *;
+@use "./mixin" as *;
+
+.main {
+  position: relative;
+  overflow: hidden;
+
+  &__bg-right {
+    position: absolute;
+    top: 797px;
+    right: 0;
+    width: 124px;
+    height: 330px;
+    background-image: url(/svg/bg-pattern-intro-right-mobile.svg);
+    background-repeat: no-repeat;
+    z-index: -1;
+
+    @include screen($min-tablet-width-1) {
+      z-index: 0;
+      top: -80px;
+      width: 436px;
+      height: 593px;
+      background-image: url(/svg/bg-pattern-intro-right-desktop.svg);
+    }
+  }
+
+  &__bg-left {
+    z-index: -1;
+    position: absolute;
+    top: 451px;
+    left: 0px;
+    width: 168px;
+    height: 165px;
+    background-image: url(/svg/bg-pattern-intro-left-mobile.svg);
+    background-repeat: no-repeat;
+
+    @include screen($min-tablet-width-1) {
+      top: 429px;
+      width: 196px;
+      height: 504px;
+      background-image: url(/svg/bg-pattern-intro-left-desktop.svg);
+    }
+  }
+
+  &__bg-line-top {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 951px;
+    background-color: $bg-dark;
+
+    @include screen($min-tablet-width-2) {
+      height: 600px;
+    }
+  }
+
+  &__section {
+    margin-inline: auto;
+
+    @include screen($min-tablet-width-2) {
+      padding-inline: 24px;
+    }
+
+    @include screen($min-desktop-width) {
+      max-width: $min-desktop-width;
+    }
+  }
+
+  &__part-1 {
+    display: grid;
+    grid-template-rows: 451px 500px;
+
+    @include screen($min-tablet-width-2) {
+      grid-template-rows: auto;
+      margin-top: 105px;
+      grid-template-columns: 546fr 540fr;
+      column-gap: 24px;
+    }
+  }
+
+  &__p1-content {
+    grid-row: 2;
+    margin-top: 93px;
+    padding-inline: 25px;
+    padding-bottom: 93px;
+    justify-self: center;
+
+    @include screen($min-tablet-width-2) {
+      padding-bottom: 0;
+      justify-self: start;
+      margin-top: 0;
+      padding-inline: 0;
+      grid-row: auto;
+    }
+  }
+
+  &__p1-title {
+    position: relative;
+    text-align: center;
+    margin-inline: auto;
+    max-width: 500px;
+    @include font-title-l-mobile($text-light-2);
+
+    @include screen($min-tablet-width-2) {
+      text-align: start;
+      padding-top: 64px;
+      margin-inline: 0;
+    }
+
+    @include screen($min-desktop-width) {
+      max-width: 14ch;
+      @include font-title-l($text-light-2);
+      line-height: 90%;
+    }
+  }
+
+  &__p1-title::before {
+    @include screen($min-tablet-width-2) {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 150px;
+      height: 1px;
+      background-color: $text-light-2;
+    }
+  }
+
+  &__p1-text {
+    margin-top: 15px;
+    text-align: center;
+    margin-inline: auto;
+    max-width: 500px;
+    @include font-p($text-light-2);
+
+    @include screen($min-tablet-width-2) {
+      text-align: start;
+    }
+
+    @include screen($min-desktop-width) {
+      margin-top: 26px;
+      max-width: 550px;
+    }
+  }
+
+  &__p1-btn {
+    margin-inline: auto;
+    margin-top: 33px;
+    display: block;
+    width: max-content;
+    height: 40px;
+    padding-inline: 26px;
+    border: 2px solid $text-light-2;
+    @include font-nav-item($text-light-2);
+    line-height: 2.6;
+    transition: background-color $t-x1, color $t-x1;
+
+    @include screen($min-tablet-width-2) {
+      margin-inline: 0;
+    }
+
+    @include screen($min-desktop-width) {
+      margin-top: 30px;
+    }
+  }
+
+  &__p1-btn:active,
+  &__p1-btn:hover {
+    background-color: $bg-light;
+    color: $text-dark;
+  }
+
+  &__p1-btn:focus-visible {
+    outline-offset: 3px;
+    border-radius: 2px;
+    outline: 2px dashed #dbd5ec;
+  }
+
+  &__p1-img {
+    grid-row: 1;
+    width: 375px;
+    height: 451px;
+    justify-self: center;
+
+    @include screen($min-tablet-width-2) {
+      width: auto;
+      height: auto;
+      grid-column: 2;
+      grid-row: auto;
+    }
+  }
+
+  &__part-2 {
+    display: grid;
+    margin-top: 140px;
+    padding-inline: 24px;
+    grid-template-rows: 113px repeat(3, 250px);
+    row-gap: 56px;
+
+    @include screen($min-tablet-width-2) {
+      margin-top: 150px;
+      grid-template-rows: auto;
+      row-gap: 0;
+      grid-template-columns: repeat(3, min(29.8vw, 350px));
+      column-gap: min(2.2vw, 30px);
+    }
+  }
+
+  &__p2-article {
+    max-width: 330px;
+    display: grid;
+    grid-template-rows: 125px 47px 1fr;
+
+    @include screen($min-tablet-width-2) {
+      max-width: unset;
+    }
+  }
+
+  &__p2-article:nth-child(3) {
+    justify-self: center;
+
+    @include screen($min-tablet-width-2) {
+      justify-self: unset;
+    }
+  }
+
+  &__p2-article:nth-child(4) {
+    justify-self: end;
+
+    @include screen($min-tablet-width-2) {
+      justify-self: unset;
+    }
+  }
+
+  &__p2-title {
+    padding-top: 41px;
+    @include font-title-l-mobile($text-dark);
+    position: relative;
+    text-align: center;
+
+    @include screen($min-tablet-width-2) {
+      padding-top: 64px;
+      grid-row: 1;
+      grid-column: 1 / -1;
+      text-align: start;
+      padding-bottom: 95px;
+    }
+
+    @include screen($min-desktop-width) {
+      @include font-title-l($text-dark);
+    }
+  }
+
+  &__p2-title::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: calc(50% - 75px);
+    width: 150px;
+    height: 1px;
+    background-color: $dark-violet;
+
+    @include screen($min-tablet-width-2) {
+      left: 0;
+    }
+  }
+
+  &__p2-icon {
+    width: 86px;
+    height: 86px;
+    background-repeat: no-repeat;
+    justify-self: center;
+
+    @include screen($min-tablet-width-2) {
+      justify-self: start;
+    }
+  }
+
+  &__p2-caption {
+    @include font-title-s($text-dark);
+    text-align: center;
+
+    @include screen($min-tablet-width-2) {
+      text-align: start;
+    }
+  }
+
+  &__p2-text {
+    text-align: center;
+    @include font-p($text-mid);
+
+    @include screen($min-tablet-width-2) {
+      text-align: start;
+    }
+  }
+
+  &__part-3 {
+    height: 344px;
+    margin-top: 140px;
+    display: grid;
+    grid-template-rows: 3fr 2fr;
+    position: relative;
+
+    @include screen($min-tablet-width-1) {
+      margin-top: 158px;
+      height: 250px;
+      padding-inline: 56px;
+      grid-template-rows: auto;
+      grid-template-columns: 2fr 1fr;
+      align-items: center;
+    }
+
+    @include screen($min-tablet-width-2) {
+      padding-inline: 105px;
+    }
+  }
+
+  &__bg-p3 {
+    position: absolute;
+    background-color: $bg-dark;
+    inset: 0px 24px;
+    z-index: -1;
+    background-image: url(/svg/bg-pattern-how-we-work-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: right top;
+
+    @include screen($min-tablet-width-1) {
+      background-image: url(/svg/bg-pattern-how-we-work-desktop.svg);
+    }
+  }
+
+  &__p3-title {
+    margin-top: 72px;
+    max-width: 17ch;
+    padding-inline: 24px;
+    justify-self: center;
+    @include font-title-m-mobile($text-light-2);
+    text-align: center;
+
+    @include screen($min-tablet-width-1) {
+      justify-self: unset;
+      margin-top: 0;
+      padding-inline: 0;
+      text-align: start;
+    }
+
+    @include screen($min-desktop-width) {
+      @include font-title-m($text-light-2);
+    }
+  }
+
+  &__p3-btn {
+    margin-top: 26px;
+    justify-self: center;
+    width: max-content;
+    height: 40px;
+    padding-inline: 20px;
+    border: 2px solid $text-light-2;
+    @include font-nav-item($text-light-2);
+    line-height: 2.6;
+    transition: background-color $t-x1, color $t-x1;
+
+    @include screen($min-tablet-width-1) {
+      justify-self: end;
+      margin-top: 0;
+    }
+  }
+
+  &__p3-btn:active,
+  &__p3-btn:hover {
+    background: $bg-light;
+    color: $text-dark;
+  }
+
+  &__p3-btn:focus-visible {
+    outline-offset: 3px;
+    border-radius: 2px;
+    outline: 2px dashed #dbd5ec;
+  }
+}
+
+.icon-1 {
+  background-image: url(/svg/icon-snappy-process.svg);
+}
+.icon-2 {
+  background-image: url(/svg/icon-affordable-prices.svg);
+}
+.icon-3 {
+  background-image: url(/svg/icon-people-first.svg);
+}

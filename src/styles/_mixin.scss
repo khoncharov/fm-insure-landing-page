@@ -1,9 +1,76 @@
-$breakpoints-up: (
-  "desktop": "1070px",
-);
+@use "./variables" as *;
 
 @mixin screen($size) {
-  @media screen and (min-width: map-get($breakpoints-up, $size)) {
+  @media screen and (min-width: $size) {
     @content;
   }
+}
+
+@mixin font-nav-item($color) {
+  font-family: $ff-text;
+  font-size: 1.4rem;
+  font-weight: $fw-bold;
+  text-transform: uppercase;
+  color: $color;
+  letter-spacing: 0.1rem;
+  line-height: 2.4;
+}
+
+@mixin font-menu-item($color) {
+  font-family: $ff-text;
+  font-size: 2rem;
+  font-weight: $fw-bold;
+  text-transform: uppercase;
+  color: $color;
+  letter-spacing: 0.15rem;
+  line-height: 3.2;
+}
+
+@mixin font-p($color) {
+  font-family: $ff-text;
+  font-size: 1.6rem;
+  font-weight: $fw-regular;
+  color: $color;
+  letter-spacing: 0.005rem;
+  line-height: 2.6rem;
+}
+
+@mixin font-title($color) {
+  font-family: $ff-heading;
+  font-weight: $fw-regular;
+  color: $color;
+  line-height: 90%;
+}
+
+@mixin font-title-l($color) {
+  letter-spacing: -0.1rem;
+  font-size: 7.2rem;
+  @include font-title($color);
+}
+
+@mixin font-title-m($color) {
+  font-size: 5.6rem;
+  letter-spacing: -0.08rem;
+  @include font-title($color);
+  line-height: 100%;
+}
+
+@mixin font-title-s($color) {
+  font-size: 2.8rem;
+  letter-spacing: -0.04rem;
+  @include font-title($color);
+}
+
+@mixin font-title-l-mobile($color) {
+  letter-spacing: -0.07rem;
+  font-size: 4.8rem;
+  @include font-title($color);
+  line-height: 100%;
+}
+
+@mixin font-title-m-mobile($color) {
+  font-size: 4rem;
+  letter-spacing: -0.08rem;
+  @include font-title($color);
+  line-height: 100%;
 }

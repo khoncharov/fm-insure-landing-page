@@ -1,18 +1,49 @@
 /* Colors */
 
-$lg-1: hsl(236, 72%, 79%);
-$lg-2: hsl(237, 63%, 64%);
+$dark-violet: hsl(256, 26%, 20%);
+$grayish-blue: hsl(216, 30%, 68%);
 
-$very-light-grayish-blue: hsl(240, 78%, 98%);
-$light-grayish-blue: hsl(234, 14%, 74%);
-$grayish-blue: hsl(233, 13%, 49%);
-$dark-grayish-blue: hsl(232, 13%, 33%);
+$very-dark-violet: hsl(270, 9%, 17%);
+$dark-grayish-violet: hsl(273, 4%, 51%);
+$very-light-gray: hsl(0, 0%, 98%);
 
 $white: hsl(0, 0%, 100%);
 
+/* Semantic layer */
+
+$bg-light: $white;
+$bg-mid: $very-light-gray;
+$bg-dark: $dark-violet;
+
+$bg-mobile-nav: $very-dark-violet;
+
+$text-light-2: $very-light-gray;
+$text-mid: $dark-grayish-violet;
+$text-dark: $very-dark-violet;
+
+$hover-dark-text: $very-dark-violet;
+
 /* Layout */
 
-$width-desktop-min: 1050px;
 $width-desktop: 1440px;
+$width-mobile: 375px;
 
-$tr-x1: 250ms;
+$min-desktop-width: 1158px;
+
+$min-tablet-width-0: 540px;
+$min-tablet-width-1: 700px;
+$min-tablet-width-2: 960px;
+
+$height-header: 80px;
+
+/* Transform timing */
+
+$t-x1: 250ms;
+
+/* Typography */
+
+$fw-bold: 700;
+$fw-regular: 400;
+
+$ff-heading: "DM Serif Display", serif;
+$ff-text: "Karla", sans-serif;
