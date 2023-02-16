@@ -22,8 +22,8 @@
   font-weight: $fw-bold;
   text-transform: uppercase;
   color: $color;
-  letter-spacing: 0.13rem;
-  line-height: 1;
+  letter-spacing: 0.15rem;
+  line-height: 3.2;
 }
 
 @mixin font-p($color) {

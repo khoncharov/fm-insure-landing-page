@@ -2,8 +2,9 @@
 @use "./mixin" as *;
 
 .header {
-  height: 80px;
+  height: $height-header;
   background-color: $bg-light;
+  position: relative;
 
   &__inner {
     margin-inline: auto;
