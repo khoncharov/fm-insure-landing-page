@@ -68,7 +68,7 @@
 
   &__part-1 {
     display: grid;
-    grid-template-rows: 451px max-content;
+    grid-template-rows: 451px 500px;
 
     @include screen($min-tablet-width-2) {
       grid-template-rows: auto;
