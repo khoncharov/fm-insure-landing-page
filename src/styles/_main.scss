@@ -11,7 +11,7 @@
     right: 0;
     width: 124px;
     height: 330px;
-    background-image: url(./svg/bg-pattern-intro-right-mobile.svg);
+    background-image: url(/svg/bg-pattern-intro-right-mobile.svg);
     background-repeat: no-repeat;
     z-index: -1;
 
@@ -20,7 +20,7 @@
       top: -80px;
       width: 436px;
       height: 593px;
-      background-image: url(./svg/bg-pattern-intro-right-desktop.svg);
+      background-image: url(/svg/bg-pattern-intro-right-desktop.svg);
     }
   }
 
@@ -30,14 +30,14 @@
     left: 0px;
     width: 168px;
     height: 165px;
-    background-image: url(./svg/bg-pattern-intro-left-mobile.svg);
+    background-image: url(/svg/bg-pattern-intro-left-mobile.svg);
     background-repeat: no-repeat;
 
     @include screen($min-tablet-width-1) {
       top: 429px;
       width: 196px;
       height: 504px;
-      background-image: url(./svg/bg-pattern-intro-left-desktop.svg);
+      background-image: url(/svg/bg-pattern-intro-left-desktop.svg);
     }
   }
 
@@ -320,12 +320,12 @@
     background-color: $bg-dark;
     inset: 0px 24px;
     z-index: -1;
-    background-image: url(./svg/bg-pattern-how-we-work-mobile.svg);
+    background-image: url(/svg/bg-pattern-how-we-work-mobile.svg);
     background-repeat: no-repeat;
     background-position: right top;
 
     @include screen($min-tablet-width-1) {
-      background-image: url(./svg/bg-pattern-how-we-work-desktop.svg);
+      background-image: url(/svg/bg-pattern-how-we-work-desktop.svg);
     }
   }
 
@@ -380,11 +380,11 @@
 }
 
 .icon-1 {
-  background-image: url(./svg/icon-snappy-process.svg);
+  background-image: url(/svg/icon-snappy-process.svg);
 }
 .icon-2 {
-  background-image: url(./svg/icon-affordable-prices.svg);
+  background-image: url(/svg/icon-affordable-prices.svg);
 }
 .icon-3 {
-  background-image: url(./svg/icon-people-first.svg);
+  background-image: url(/svg/icon-people-first.svg);
 }

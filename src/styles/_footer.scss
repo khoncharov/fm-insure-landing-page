@@ -13,14 +13,14 @@
     background-color: $bg-mid;
     width: 100%;
     height: 1055px;
-    background-image: url(./svg/bg-pattern-footer-mobile.svg);
+    background-image: url(/svg/bg-pattern-footer-mobile.svg);
     background-repeat: no-repeat;
     background-size: 100% 173px;
     z-index: -1;
 
     @include screen($min-tablet-width-0) {
       background-size: auto;
-      background-image: url(./svg/bg-pattern-footer-desktop.svg);
+      background-image: url(/svg/bg-pattern-footer-desktop.svg);
       height: 615px;
     }
 
@@ -136,23 +136,23 @@
 }
 
 .icon-fb {
-  -webkit-mask-image: url(./svg/icon-facebook.svg);
-  mask-image: url(./svg/icon-facebook.svg);
+  -webkit-mask-image: url(/svg/icon-facebook.svg);
+  mask-image: url(/svg/icon-facebook.svg);
 }
 
 .icon-tw {
-  -webkit-mask-image: url(./svg/icon-twitter.svg);
-  mask-image: url(./svg/icon-twitter.svg);
+  -webkit-mask-image: url(/svg/icon-twitter.svg);
+  mask-image: url(/svg/icon-twitter.svg);
 }
 
 .icon-pin {
-  -webkit-mask-image: url(./svg/icon-pinterest.svg);
-  mask-image: url(./svg/icon-pinterest.svg);
+  -webkit-mask-image: url(/svg/icon-pinterest.svg);
+  mask-image: url(/svg/icon-pinterest.svg);
 }
 
 .icon-inst {
-  -webkit-mask-image: url(./svg/icon-instagram.svg);
-  mask-image: url(./svg/icon-instagram.svg);
+  -webkit-mask-image: url(/svg/icon-instagram.svg);
+  mask-image: url(/svg/icon-instagram.svg);
 }
 
 .attribution {
