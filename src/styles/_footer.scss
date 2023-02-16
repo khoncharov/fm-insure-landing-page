@@ -15,9 +15,11 @@
     height: 1055px;
     background-image: url(./svg/bg-pattern-footer-mobile.svg);
     background-repeat: no-repeat;
+    background-size: 100% 173px;
     z-index: -1;
 
     @include screen($min-tablet-width-0) {
+      background-size: auto;
       background-image: url(./svg/bg-pattern-footer-desktop.svg);
       height: 615px;
     }
